@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+	char n[100];
+	int iguais = 1;
+
+	printf("Digite um valor: ");
+	scanf("%s", n);
+
+
+	for (int i = 1; i < strlen(n); i++) {
+		if (n[i] != n[0]) {
+			iguais = 0;
+			break;
+		}
+	}
+
+	if (iguais) {
+		printf("Os digitos sao todos iguais!\n");
+	} else {
+		printf("Os digitos NAO sao todos iguais!\n");
+	}
+
+	return 0;
+}
