@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+	int numero_magico, chute, tentativas = 0;
+	srand(time(NULL));
+	numero_magico = rand() % 500 + 1; 
+	printf("Tente adivinhar o numero magico entre 1 e 500!\n");
+
+	do {
+		printf("Digite seu chute:");
+		scanf("%d", &chute);
+		tentativas++;
+		if (chute > numero_magico) {
+			printf("O numero magico C) menor!\n");
+		} else if (chute < numero_magico) {
+			printf("o numero magico C) maior!\n");
+		}
+	} while (chute != numero_magico);
+	printf("\nparabens! voce acertou em %d tentativas!\n", tentativas);
+	if(tentativas >= 1&& tentativas <=3) {
+	printf("\\0/\n");
+	} else if(tentativas >= 4 && tentativas <=6) {
+	printf(":-D\n");
+	} else if(tentativas >=7 && tentativas <=10) {
+	printf(":-\\n");
+	} else {
+		printf(":-\\n");
+	}
+	return 0;
+}
